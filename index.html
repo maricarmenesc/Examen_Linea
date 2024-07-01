@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen en Línea</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div id="app">
+        <header id="start-screen">
+            <h1>Examen en Línea</h1>
+            <button id="start-button" class="btn">Iniciar Examen</button>
+        </header>
+
+        <!-- Nueva sección para las reglas del examen -->
+        <section id="rules-screen" class="hidden">
+            <h2>Reglamento de Examen en Línea</h2>
+            <ol>
+                <li>Solo tendras <span class="highlight">15 segundos</span> para responder cada pregunta.</li>
+                <li>Una vez que seleccionas tu respuesta , no se puede deshacer.</li>
+                <li>No puedes seleccionar ninguna opción una vez que se acabe el tiempo</li>
+                <li>No puedes salir del quiz mientras corra el tiempo.</li>
+                <li>Obtendrás puntos con base a tus respuestas correctas.</li>
+            </ol>
+            <button id="exit-rules-button" class="btn">Salir</button>
+            <button id="continue-button" class="btn">Continuar</button>
+        </section>
+
+        <main id="exam-screen" class="hidden">
+            <div id="question-container">
+                <h2 id="question"></h2>
+                <div id="answers"></div>
+            </div>
+            <div id="controls">
+                <span id="timer" class="timer">15</span>
+                <button id="next-button" class="btn hidden">Siguiente Pregunta</button>
+            </div>
+        </main>
+        <footer id="result-screen" class="hidden">
+            <h2 id="result-message"></h2>
+            <img id="result-image" src="img/felicidades.png" alt="Resultado del examen" class="result-image">
+            <button id="retry-button" class="btn">Repetir Examen</button>
+            <button id="exit-button" class="btn">Salir</button>
+        </footer>
+        
+    </div>
+    <script src="particles.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        particlesJS.load('particles-js', 'particles.json', function() {
+            console.log('particles.js config loaded');
+        });
+    </script>
+</body>
+</html>
